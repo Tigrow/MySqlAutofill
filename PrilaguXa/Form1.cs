@@ -13,10 +13,6 @@ namespace PrilaguXa
 {
     public partial class Form1 : Form
     {
-        //string connStr = "server=127.0.0.1;port=3306;user=root;password=;database=databasa";
-        //string connStr = "Database=DataBasa;Data Source=localhost;User Id=root;Password=";
-
-        //private BindingSource bindingSorce = new BindingSource();
         public Form1()
         {
             InitializeComponent();
@@ -49,6 +45,7 @@ namespace PrilaguXa
 
 
             dataGridView1.DataSource = SqlAdapter.GetTabel(comboBox1.Items[comboBox1.SelectedIndex].ToString()).Tables[comboBox1.Items[comboBox1.SelectedIndex].ToString()];
+
         }
     }
 }
