@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace PrilaguXa
 {
@@ -45,7 +44,21 @@ namespace PrilaguXa
 
 
             dataGridView1.DataSource = SqlAdapter.GetTabel(comboBox1.Items[comboBox1.SelectedIndex].ToString()).Tables[comboBox1.Items[comboBox1.SelectedIndex].ToString()];
+            label6.Text = "Количество столбцов = " + dataGridView1.ColumnCount.ToString()
+                + "\r\nКоличество строк = " + dataGridView1.RowCount.ToString();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            XmlAdapter.Load(openFileDialog1.FileName);
+            
+
+
+        }
+        internal void Send(string str)
+        {
+            listBox1.Items.Add(str);
         }
     }
 }

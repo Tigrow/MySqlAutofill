@@ -9,6 +9,7 @@ namespace PrilaguXa
 {
     static class Program
     {
+        public static Form1 fo;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -17,7 +18,7 @@ namespace PrilaguXa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(fo = new Form1());   
         }
     }
 }
